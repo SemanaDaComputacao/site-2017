@@ -1,0 +1,354 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Material Design Lite</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/material-blog-android-desktop.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="images/material-blog-ios-desktop.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/material-blog-touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="images/material-blog-favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+  <link rel="stylesheet" href="styles/material-site-styles.css">
+  <!-- <link rel="stylesheet" href="styles/material-blog-styles.css"> -->
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-light_blue.min.css" /> -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+  <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+
+    .typography--montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .typography--montserrat-black {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+    }
+  </style>
+
+
+
+  <!-- <link href="styles/base-styles.css" rel="stylesheet" />
+  <link href="styles/index-styles.css" rel="stylesheet" />
+
+  <script src="scripts/base-scripts.js"></script>
+  <script src="scripts/index-scripts.js"></script> -->
+
+  <script src="scripts/lectures-scripts.js"></script>
+  <script src="data/lectures.json"></script>
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="background: linear-gradient(#1A237E, #000);">
+
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall mdl-color--black mdl-color-text--white">
+      <div class="mdl-layout__header-row">
+        <span class="android-title mdl-layout-title">
+          <img class="android-logo-image" src="images/material-site-android-logo.png">
+        </span>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="android-header-spacer mdl-layout-spacer"></div>
+        <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="android-navigation-container">
+          <nav class="android-navigation mdl-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Play</a>
+          </nav>
+        </div>
+        <span class="android-mobile-title mdl-layout-title">
+          <img class="android-logo-image" src="images/material-site-android-logo.png">
+        </span>
+        <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item">5.0 Lollipop</li>
+          <li class="mdl-menu__item">4.4 KitKat</li>
+          <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
+          <li class="mdl-menu__item">Android History</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="android-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="android-logo-image" src="images/material-site-android-logo-white.png">
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Phones</a>
+        <a class="mdl-navigation__link" href="">Tablets</a>
+        <a class="mdl-navigation__link" href="">Wear</a>
+        <a class="mdl-navigation__link" href="">TV</a>
+        <a class="mdl-navigation__link" href="">Auto</a>
+        <a class="mdl-navigation__link" href="">One</a>
+        <a class="mdl-navigation__link" href="">Play</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Versions</span>
+        <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
+        <a class="mdl-navigation__link" href="">KitKat 4.4</a>
+        <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
+        <a class="mdl-navigation__link" href="">Android history</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Resources</span>
+        <a class="mdl-navigation__link" href="">Official blog</a>
+        <a class="mdl-navigation__link" href="">Android on Google+</a>
+        <a class="mdl-navigation__link" href="">Android on Twitter</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">For developers</span>
+        <a class="mdl-navigation__link" href="">App developer resources</a>
+        <a class="mdl-navigation__link" href="">Android Open Source Project</a>
+        <a class="mdl-navigation__link" href="">Android SDK</a>
+      </nav>
+    </div>
+
+    <section class="android-content mdl-layout__content">
+      <a name="top"></a>
+
+      <style>
+         #back-canvas {
+           position: fixed; 
+           top: 0; 
+           height: 100%; 
+           width: 100%; 
+           background: url(styles/images/connections-white.png) repeat;
+         }
+
+        .lecture-info {
+          background: rgba(0, 0, 0, .75);
+          border-radius: 2px;
+          margin: 30px calc((100% - 900px) / 2);
+          max-width: 900px;
+          width: 100%;
+        }
+
+        .lecture-info-theme {
+        }
+
+        .lecture-info-theme-img  {
+          height: 280px;
+        }
+
+        .lecture-info-theme-title  {
+          display: table;
+          margin: 0 calc((100% - 600px - 2 * 6px) / 2);
+          margin-top: -140px;
+          max-width: 100%;
+          min-height: 150px;
+          padding: 6px;
+          width: calc(600px - 2 * 6px); 
+        }
+
+        .lecture-info-theme-title > h1 {
+          display: table-cell;
+          margin: 0;
+          vertical-align: middle;
+        } 
+
+        .lecture-info-text p {
+          margin: 0;
+          padding: 16px;
+          text-align: justify;
+          text-indent: 50px;
+        }
+
+        .lecture-info-text ~ .lecture-info-text {
+          border-top: 1px solid #3b3b3b;
+        }
+
+        .lecture-info-author {
+          justify-content: center;
+        }
+
+        .lecture-info-author h2 {
+          margin: 0;
+        }
+
+        .lecture-info-select {
+          align-items: center;
+          justify-content: space-around;
+          padding: 16px;
+        }
+
+        @media (max-width: 900px) {
+          .lecture-info {
+            margin: 0;
+          }
+        }
+
+        @media (max-width: 660px) {
+          .lecture-info-theme-title {
+            margin: 0;
+            width: 100%;
+          } 
+
+          .mdl-cell--6-col-phone {
+            max-width: 350px;
+            width: calc(100% - 16px) !important;
+          }
+        }
+      </style>
+
+      <article class="lecture-info mdl-color-text--white mdl-shadow--16dp">
+        <div class="lecture-info-theme">
+          <div id="lecture-image" class="lecture-info-theme-img mdl-color--light-blue-A700">
+          </div>
+          <div class="lecture-info-theme-title mdl-color--light-blue-A700 mdl-shadow--3dp">
+            <h1 id="lecture-title" class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Encontro do BCC</h1>            
+          </div>
+        </div>
+        <div id="lecture-info" class="lecture-info-text typography--montserrat">
+          <p>
+            O Encontro do BCC consiste numa semana de palestras que abordam temas variados sobre as diversas áreas da computação. Apesar
+            de ser voltado para o pessoal da graduação em ciência da computação, o evento é aberto e qualquer interessado
+            pode assistir as palestras.
+          </p>
+          <p>
+            Além de estarmos focados em trazer assuntos interessantes e inovadores, neste ano também contaremos com a presença das editoras
+            Aleph e Casa do Código com descontos especiais! E teremos sorteio de livros doados pelas editoras Blucher e Springer!
+          </p>
+          <p>
+            Sem falar nos maravilhosos coffee-breaks.
+          </p>
+        </div>
+        <div id="lecture-author" class="lecture-info-text lecture-info-author typography--montserrat mdl-grid">
+          <div id="lecture-author-image" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-color--black mdl-shadow--3dp">
+          </div>
+          <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet">
+            <h2 id="lecture-author-name" class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Autor</h2>
+            <p id="lecture-author-info">
+              Os ônibus circulares operados pela USP são linhas internas e gratuitas que complementam o transporte feito pelas linhas 8012
+              e 8022 (gratuito aos portadores do Bilhete USP), buscando oferecer, juntamente com o circular operado pela SPTrans,
+              um perfil adequado ao transporte. Horário de Funcionamento: de segunda a sexta-feira, das 6h às 22h.
+              Sistema de Transporte Especial voltado ao melhor conforto das pessoas com deficiência ou mobilidade reduzida. Informações:
+              USP LEGAL: 3091-2939 / Guarda Universitária (atendimento): 3091-4222
+            </p>
+          </div>
+        </div>
+        <div class="lecture-info-text lecture-info-select typography--montserrat mdl-grid">
+          <span>Selecione uma palestra: </span>
+          <select id="lecture-select" class="mdl-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" onchange="lectureSelected(event)">
+            <option value="Palestra_1"> Palestra 1, por Pessoa 1</option>
+            <option value="Palestra_2"> Palestra 2, por Pessoa 2</option>
+          </select>
+        </div>
+      </article>
+
+      <footer class="android-footer mdl-mega-footer mdl-color--black mdl-color-text--white">
+        <div class="mdl-mega-footer--top-section">
+          <div class="mdl-mega-footer--left-section">
+            <button class="mdl-mega-footer--social-btn"></button> &nbsp;
+            <button class="mdl-mega-footer--social-btn"></button> &nbsp;
+            <button class="mdl-mega-footer--social-btn"></button>
+          </div>
+          <div class="mdl-mega-footer--right-section">
+            <a class="mdl-typography--font-light" href="#top">
+              Back to Top
+              <i class="material-icons">expand_less</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-mega-footer--middle-section">
+          <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+          <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+        </div>
+
+        <div class="mdl-mega-footer--bottom-section">
+          <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+            Versions
+            <i class="material-icons">arrow_drop_up</i>
+          </a>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+            <li class="mdl-menu__item">5.0 Lollipop</li>
+            <li class="mdl-menu__item">4.4 KitKat</li>
+            <li class="mdl-menu__item">4.3 Jelly Bean</li>
+            <li class="mdl-menu__item">Android History</li>
+          </ul>
+          <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+            For Developers
+            <i class="material-icons">arrow_drop_up</i>
+          </a>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+            <li class="mdl-menu__item">App developer resources</li>
+            <li class="mdl-menu__item">Android Open Source Project</li>
+            <li class="mdl-menu__item">Android SDK</li>
+            <li class="mdl-menu__item">Android for Work</li>
+          </ul>
+          <a class="android-link mdl-typography--font-light" href="">Blog</a>
+          <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+        </div>
+
+      </footer>
+
+    </section>
+
+    <canvas id="back-canvas"><canvas>
+
+  </div>
+  <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source"
+    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

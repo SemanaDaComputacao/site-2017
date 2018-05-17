@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/*ID's*/
+#back-canvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*Classes*/
+.color--black-75 {
+  background: rgba(0, 0, 0, .75);
+}
+
+.color--light-blue-A700-75 {
+  background: rgba(0, 145, 234, .75);
+}
+
+.color-text--inherit {
+  color: inherit;
+}
+
+.content-wrapper {
+  background: linear-gradient(#1A237E, #000);
+}
+
+.footer-icon {
+  height: 36px;
+}
+
+.footer-icon-big {
+  height: 72px;
+}
+
+.typography--montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.typography--montserrat-black {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.typography--no-decoration {
+  text-decoration: none;
+}
+
+.typography--vertical-align-middle {
+  vertical-align: middle;
+}
+
+/*Elements*/
+
+/*Media*/
+
+/*Fonts*/

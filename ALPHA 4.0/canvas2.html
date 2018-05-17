@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+<head>
+  <!-- https://github.com/spite/ccapture.js -->
+  <script src="scripts\CCapture.js"></script>
+  <!-- Include Whammy if you want to export WebM -->
+  <script src="scripts\Whammy.js"></script>
+  <!-- Include tar.js if you want to export PNG or JPEG -->
+  <script src="scripts\tar.js"></script>
+  <!-- Include download.js for easier file download -->
+  <script src="scripts\download.js"></script>
+</head>
+<body>
+  <style>
+    body, html {
+      border: none;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      align-items: center;
+      background: linear-gradient(#1A237E, #000);
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #canvas {
+      height: 500px;
+      outline: 1px solid white;
+      width: 500px;
+    }
+
+    #canvas-repeating-pattern {
+      height: calc(3 * 500px);
+      left: calc((100% - (3 * 500px)) / 2);
+      position: absolute;
+      top: calc((100% - (3 * 500px)) / 2);
+      width: calc(3 * 500px);
+      z-index: -1;
+    }
+
+    #controls {
+      left: 50px;
+      position: fixed;
+      bottom: 50px;
+    }
+  </style>
+
+  <canvas id="canvas"></canvas>
+
+  <canvas id="canvas-repeating-pattern"></canvas>
+
+  <aside id="controls">
+    <button onclick="startButtonClicked(event)">start</button>
+    <button onclick="stopButtonClicked(event)">stop</button>
+    <button onclick="saveButtonClicked(event)">save</button>
+  </aside>
+
+  <script>
+    var canvas;
+    var ctx;
+    var particles = new Array();
+    var particlesCount = 10;
+
+    var repeatingCanvas;
+    var repeatingCtx;
+    var repeatingParticles = new Array();
+
+    var capturer;
+    var isRecording = false;
+
+    function Particle(x, y, xVelocity, yVelocity, radius, fieldRadius) {
+      this.x = x;
+      this.y = y;
+      this.xVelocity = xVelocity;
+      this.yVelocity = yVelocity;
+      this.radius = radius;
+      this.fieldRadius = fieldRadius;
+
+      this.clone = function () {
+        return new Particle(
+          this.x + 0, this.y + 0, 
+          this.xVelocity + 0, this.yVelocity + 0,
+          this.radius + 0, this.fieldRadius + 0
+        );
+      }
+      this.getRepeatingParticle = function (j, k) {
+        var repeatingParticle = this.clone();
+
+        repeatingParticle.x = j * canvas.width + this.x;
+        repeatingParticle.y = k * canvas.height + this.y;
+
+        return repeatingParticle;
+      }
+    }
+
+    function windowLoaded(event) {
+      canvas = document.getElementById("canvas");
+      ctx = canvas.getContext("2d");
+      
+      repeatingCanvas = document.getElementById("canvas-repeating-pattern");
+      repeatingCtx = repeatingCanvas.getContext("2d");
+
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      
+      repeatingCanvas.width = repeatingCanvas.offsetWidth;
+      repeatingCanvas.height = repeatingCanvas.offsetHeight;
+
+      for (var i = 0; i < particlesCount; i++) {
+        particles[i] = new Particle(
+          randomInterval(0, canvas.width),
+          randomInterval(0, canvas.height),
+          (randomInterval(0, 1) - 1) * ((randomInterger(2) == 0) ? 1 : -1),
+          (randomInterval(0, 1) - 1) * ((randomInterger(2) == 0) ? 1 : -1),
+          (randomInterval(0, 6) - 10) *  -1,
+          (randomInterval(0, 150) - 200) *  -1
+        );
+      }
+
+      requestAnimationFrame(nextAnimationFrameRequested);
+    }
+
+    function startButtonClicked(event) {
+      isRecording = true;
+
+      capturer = new CCapture({ format: "png", framerate: 60, name: "canvas500x500", verbose: true });
+      capturer.start();
+
+      // nextAnimationFrameRequested();
+    }
+
+    function stopButtonClicked(event) {
+      capturer.stop();
+    }
+
+    function saveButtonClicked(event) {
+      capturer.save();
+    }
+
+    function nextAnimationFrameRequested() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      repeatingCtx.clearRect(0, 0, repeatingCanvas.width, repeatingCanvas.height);
+
+      for (var i = 0; i < particlesCount; i++) {
+        setParticlePosition(i);
+
+        // drawParticle(i);
+
+        drawRepeatingParticles(i);
+
+        // drawParticleField(i);
+
+        // drawParticleNextConnections(i);
+
+        drawParticleNextRepeatingConnections(i);
+      }    
+      requestAnimationFrame(nextAnimationFrameRequested); 
+
+      if (isRecording) {
+        ctx.drawImage(repeatingCanvas, -canvas.width, -canvas.height);
+
+        capturer.capture(canvas);
+      }
+    }
+
+    function setParticlePosition(i) {
+      particles[i].x += particles[i].xVelocity;
+      particles[i].y += particles[i].yVelocity;
+
+      if (particles[i].x < 0) particles[i].x += canvas.width;
+      else if (particles[i].x > canvas.width) particles[i].x -= canvas.width;
+      if (particles[i].y < 0) particles[i].y += canvas.height;
+      else if (particles[i].y > canvas.height) particles[i].y -= canvas.height;
+    }
+
+    function drawParticle(i) {
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = "rgba(64, 196, 355, 1)";
+
+      ctx.fillStyle = "rgba(64, 196, 355, .1)";
+      
+      ctx.beginPath();
+      ctx.arc(particles[i].x + particles[i].radius / 2, 
+        particles[i].y + particles[i].radius / 2, 
+        particles[i].radius / 2, 0, 2 * Math.PI
+      );
+      ctx.fill();
+
+      ctx.fillStyle = "rgba(64, 196, 355, 1)";
+      
+      ctx.beginPath();
+      ctx.arc(particles[i].x + particles[i].radius / 2, 
+        particles[i].y + particles[i].radius / 2, 
+        particles[i].radius / 3, 0, 2 * Math.PI
+      );
+      ctx.fill();
+
+      ctx.shadowBlur = 5;
+
+      ctx.fillStyle = "rgba(255, 255, 255, .8)";
+
+      ctx.beginPath();
+      ctx.arc(particles[i].x + particles[i].radius / 2, 
+        particles[i].y + particles[i].radius / 2, 
+        particles[i].radius / 4, 0, 2 * Math.PI
+      );
+      ctx.fill();
+    }
+
+    function drawRepeatingParticles(i) {
+
+      for (var j = 0; j < 3; j++)
+        for (var k = 0; k < 3; k++) {
+          repeatingParticle = particles[i].getRepeatingParticle(j, k);
+          
+          repeatingCtx.shadowBlur = 10;
+          repeatingCtx.shadowColor = "rgba(64, 196, 355, 1)";
+
+          repeatingCtx.fillStyle = "rgba(64, 196, 355, .1)";
+          
+          repeatingCtx.beginPath();
+          repeatingCtx.arc(repeatingParticle.x + repeatingParticle.radius / 2, 
+            repeatingParticle.y + repeatingParticle.radius / 2, 
+            repeatingParticle.radius / 2, 0, 2 * Math.PI
+          );
+          repeatingCtx.fill();
+
+          repeatingCtx.fillStyle = "rgba(64, 196, 355, 1)";
+          
+          repeatingCtx.beginPath();
+          repeatingCtx.arc(repeatingParticle.x + repeatingParticle.radius / 2, 
+            repeatingParticle.y + repeatingParticle.radius / 2, 
+            repeatingParticle.radius / 3, 0, 2 * Math.PI
+          );
+          repeatingCtx.fill();
+
+          repeatingCtx.shadowBlur = 5;
+
+          repeatingCtx.fillStyle = "rgba(255, 255, 255, .8)";
+
+          repeatingCtx.beginPath();
+          repeatingCtx.arc(repeatingParticle.x + repeatingParticle.radius / 2, 
+            repeatingParticle.y + repeatingParticle.radius / 2, 
+            repeatingParticle.radius / 4, 0, 2 * Math.PI
+          );
+          repeatingCtx.fill();
+        }
+    }
+
+    function drawParticleField(i) {
+      ctx.shadowBlur = 5;
+
+      ctx.strokeStyle = "rgba(255, 255, 255, .5)";
+
+      ctx.lineWidth = particles[i].radius / 8;
+
+      ctx.beginPath();
+      ctx.arc(particles[i].x + particles[i].radius / 2, 
+        particles[i].y + particles[i].radius / 2, 
+        particles[i].fieldRadius, 0, 2 * Math.PI
+      );
+      ctx.stroke();
+    }
+
+    function drawParticleNextConnections(i) {      
+      for (var j = i; j < particlesCount; j++) {
+        var distanceIJ = distance(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+
+        if (distanceIJ <= particles[i].fieldRadius || distanceIJ <= particles[j].fieldRadius) {
+          var opacity = (1 - (distanceIJ + Math.min(particles[i].fieldRadius, particles[j].fieldRadius)) / (particles[i].fieldRadius + particles[j].fieldRadius));
+          opacity = (1 / (0.75 + Math.exp(-2 * opacity)) - 0.25);
+
+          ctx.shadowBlur = 5;
+          ctx.shadowColor = "rgba(64, 196, 355, 1)";
+          
+          ctx.strokeStyle = "rgba(255, 255, 255, " + opacity + ")";
+
+          ctx.lineWidth = 2 * opacity * (particles[i].radius / 8) * (particles[j].radius / 8);
+
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x + particles[i].radius / 2, particles[i].y + particles[i].radius / 2);
+          ctx.lineTo(particles[j].x + particles[j].radius / 2, particles[j].y + particles[j].radius / 2);
+          ctx.stroke();
+        }
+      }
+    }
+    
+    function drawParticleNextRepeatingConnections(i) {      
+      for (var j = i + 1; j < particlesCount; j++) {
+
+        for (var ij = 0; ij < 3; ij++)
+          for (var ik = 0; ik < 3; ik++) {
+            var repeatingParticle = particles[i].getRepeatingParticle(ij, ik);
+
+            for (var jj = Math.max(0, ij - 1); jj < Math.min(3, ij + 1); jj++)
+              for (var jk = Math.max(0, ik - 1); jk < Math.min(3, ik + 1); jk++) {
+
+                // if (((ij == jj) && (ik == jk)) && !((ij == 1) && (ik == 1))) continue;
+
+                var nextRepeatingParticle = particles[j].getRepeatingParticle(jj, jk);
+
+                var distanceIJ = distance(repeatingParticle.x, repeatingParticle.y, nextRepeatingParticle.x, nextRepeatingParticle.y);
+
+                if (distanceIJ <= repeatingParticle.fieldRadius || distanceIJ <= nextRepeatingParticle.fieldRadius) {
+                  var opacity = (1 - (distanceIJ + Math.min(repeatingParticle.fieldRadius, nextRepeatingParticle.fieldRadius)) / (repeatingParticle.fieldRadius + nextRepeatingParticle.fieldRadius));
+                  opacity = (1 / (0.75 + Math.exp(-2 * opacity)) - 0.25);
+
+                  repeatingCtx.shadowBlur = 5;
+                  repeatingCtx.shadowColor = "rgba(64, 196, 355, 1)";
+                  
+                  repeatingCtx.strokeStyle = "rgba(255, 255, 255, " + opacity + ")";
+
+                  repeatingCtx.lineWidth = 2 * opacity * (repeatingParticle.radius / 8) * (nextRepeatingParticle.radius / 8);
+
+                  repeatingCtx.beginPath();
+                  repeatingCtx.moveTo(repeatingParticle.x + repeatingParticle.radius / 2, repeatingParticle.y + repeatingParticle.radius / 2);
+                  repeatingCtx.lineTo(nextRepeatingParticle.x + nextRepeatingParticle.radius / 2, nextRepeatingParticle.y + nextRepeatingParticle.radius / 2);
+                  repeatingCtx.stroke();
+                }
+
+              }
+
+          }
+
+      }
+    }    
+
+    function distance(x1, y1, x2, y2) {      
+      return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    }
+
+    function standardDeviation(a, b, c) {
+      var mean = (a + b + c) / 3;
+      var variance = ((a - mean) ^ 2 + (b - mean) ^ 2 + (c - mean) ^ 2) / 3;
+      return Math.sqrt(variance);
+    }
+
+    function randomInterval(a, b) {
+      return a + Math.random() * (b - a);
+    }
+
+    function randomInterger(n) {
+      return Math.floor(Math.random() *n);
+    }
+
+    window.addEventListener("load", windowLoaded);
+  </script>
+</body>
+</html>

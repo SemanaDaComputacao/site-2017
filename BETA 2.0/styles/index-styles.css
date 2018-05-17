@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/*ID's*/
+#back-canvas {
+  position: fixed; 
+  top: 0; 
+  height: 100%; 
+  width: 100%; 
+}
+
+/*Classes*/
+.article-welcome {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin: 0 calc((100% - 900px) / 2);
+  padding-top: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.article-welcome-logo {
+  padding: 24px;
+}
+
+.article-welcome-info {
+  padding: 16px;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+.article-schedule {
+  padding: 16px;
+}
+
+.article-schedule > h2 {
+  margin: 0;
+}
+
+.article-schedule .mdl-grid {
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.article-schedule table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.article-schedule table td {
+  height: 36px;
+  border: 1px solid #3b3b3b;
+  min-width: 60px;
+  font-size: 16px;
+}
+
+.article-schedule table td[rowspan="2"] {
+  padding: 0 18px;
+}
+
+.article-schedule table td span ~ span {
+  font-size: 13px;
+}
+
+.article-schedule table a {
+  text-decoration: none;
+}
+
+.article-schedule table tbody {
+  cursor: pointer;
+}
+
+.article-schedule table tbody:hover {
+  background-color: rgba(255, 255, 255, .12);
+}
+
+.article-history {
+  margin: 0 calc((100% - 900px) / 2);
+  max-width: 900px;
+  padding-top: 16px;
+}
+
+.article-history > h2 {
+  margin: 0;
+}
+
+.article-history h3 {
+  margin: 0;
+}
+
+.article-history > div:first-of-type {
+  padding: 16px;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+.article-history > div > p:last-child {
+  margin-bottom: 0;
+}
+
+.article-history > div:not(:first-of-type) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-setting {
+  position: relative;
+}
+
+.article-setting::after {
+  background: url(../images/back-earth-view-IME.png) center/cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.article-setting > div {
+  margin: 0 calc((100% - 900px) / 2);
+  max-width: 900px;
+  padding: 16px;
+}
+
+.article-setting > div > h2 {
+  margin-top: 0;
+}
+
+.article-setting > div h3 {
+  margin: 0 0 16px
+}
+
+.article-setting > div p {
+  text-align: justify;
+  text-indent: 50px;
+}
+
+.article-setting > div > .mdl-grid {
+  justify-content: center;
+}
+
+.article-setting-maps {
+  border: 0;
+}
+
+/*Elements*/
+
+/*Media*/
+@media (min-width: 900px) {
+  .article-welcome {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - (56px + 30px));
+  }
+
+  .article-welcome-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .article-schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - (56px + 2 * 16px));
+  }
+
+  .article-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - (56px + 16px));
+  }
+
+  .article-setting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - (56px + 16px));
+  }
+}
+
+@media (max-width: 900px) {
+  .article-welcome {
+    padding-top: 0;
+  }
+
+  .article-schedule table td {
+    height: 40px;
+  }
+  
+  .article-welcome, .article-history, .article-setting > div {
+    margin: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .mdl-cell--6-col-phone {
+    max-width: 350px;
+    width: calc(100% - 16px) !important;
+  }
+}
+
+/*Fonts*/

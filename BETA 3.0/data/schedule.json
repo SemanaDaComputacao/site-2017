@@ -1,0 +1,334 @@
+var schedule = `
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Sexta-feira 18/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>15:00</td>
+        <td rowspan="2">
+          Palestra ao Ensino Médio
+        </td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Segunda-feira 21/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>14:00</td>
+        <td rowspan="2">
+          <a href="lectures.html">
+            <span class="mdl-color-text--light-blue-A700">Computação Holográfica</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Luciano Silva - Mackenzie</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>15:00</td>
+        <td rowspan="2">
+          <a href="lectures.html#Computa%C3%A7%C3%A3o%20Musical%20e%20Sonologia">
+            <span class="mdl-color-text--light-blue-A700">Computação Musical</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Marcelo Queiroz</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td colspan="2">
+          Coffee Break
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>16:30</td>
+        <td rowspan="2">
+          <a href="lectures.html#Infer%C3%AAncia%20em%20Linguagem%20Natural">
+            <span class="mdl-color-text--light-blue-A700">Inferência em Linguagem Natural</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Marcos Lopes – FFLCH</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>17:30</td>
+        <td rowspan="2">
+          <a href="lectures.html#Seguran%C3%A7a%20Web">
+            <span class="mdl-color-text--light-blue-A700">Segurança Web</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Marcos Simplício</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>18:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Terça-feira 22/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>14:00</td>
+        <td rowspan="4">
+          <a href="lectures.html#Smart%20Cities">
+            <span class="mdl-color-text--light-blue-A700">Smart Cities</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Kiev Gama - UFPE</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14:50</td>
+      </tr>
+      <tr>
+        <td>15:00</td>
+      </tr>
+      <tr>
+        <td>15:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td colspan="2">
+          Coffee Break
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>16:30</td>
+        <td rowspan="2">
+          Em breve
+        </td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>17:30</td>
+        <td rowspan="2">
+          Em breve
+        </td>
+      </tr>
+      <tr>
+        <td>18:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Quarta-feira 23/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>14:00</td>
+        <td rowspan="2">
+          <a href="lectures.html">
+            <span class="mdl-color-text--light-blue-A700">Processos Estocásticos na Computação</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Hedibert Freitas Lopes - Insper</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>15:00</td>
+        <td rowspan="2">
+          <a href="lectures.html#Algoritmos%20de%20Recomenda%C3%A7%C3%A3o">
+            <span class="mdl-color-text--light-blue-A700">Algoritmos de Recomendação na Kekanto</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Matheus - Kekanto</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td colspan="2">
+          Coffee Break
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>16:30</td>
+        <td rowspan="2">
+          <a href="lectures.html#Geometria%20Computacional%20e%20Aplica%C3%A7%C3%B5es">
+            <span class="mdl-color-text--light-blue-A700">Geometria Computacional</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Jorge Stolfi</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>17:30</td>
+        <td rowspan="2">
+          <a href="lectures.html">
+            <span class="mdl-color-text--light-blue-A700">NEU - Empreendedorismo na USP</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Marcos Simplício</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>18:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Quinta-feira 24/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>14:00</td>
+        <td rowspan="2">
+          <a href="lectures.html#A%20Teoria%20IMEana%20aplicada%20no%20desenvolvimento%20de%20jogos">
+            <span class="mdl-color-text--light-blue-A700">A Teoria IMEana aplicada no desenvolvimento de jogos</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Vinicius Vecchi - VRMonkey</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>15:00</td>
+        <td rowspan="2">
+          <a href="lectures.html">
+            <span class="mdl-color-text--light-blue-A700">Desenvolvimento Web em Xamarim Native</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Thiago - Opus</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15:50</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td colspan="2">
+          Coffee Break
+        </td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>16:30</td>
+        <td rowspan="2">
+          <a href="lectures.html">
+            <span class="mdl-color-text--light-blue-A700"></span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Claudia Melo</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+      </tr>
+    </tbody>
+    <tbody class="js-row-link">
+      <tr>
+        <td>17:30</td>
+        <td rowspan="2">
+          <a href="">
+            <span class="mdl-color-text--light-blue-A700">Métodos Ágeis</span>
+            <br>
+            <span class="mdl-color-text--light-blue-A400">Cecília Ferandes e Mariana Bravo</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>18:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+  <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+    <thead>
+      <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+        <td colspan="2">Sexta-feira 25/8</td>
+      </tr>
+    </thead>
+    <tbody class="js-row-link">
+      <tr>
+        <td>14:00</td>
+        <td rowspan="2">
+          Conversa com os professores do DCC
+        </td>
+      </tr>
+      <tr>
+        <td>18:20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`

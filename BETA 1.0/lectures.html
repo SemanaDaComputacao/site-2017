@@ -1,0 +1,181 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="author" content="Vitor Santa Rosa Gomes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <title>Palestras do IX Encontro do BCC</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,900">
+
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+  <link rel="stylesheet" href="styles/lectures-styles.css"/>
+  <link rel="stylesheet" href="styles/base-styles.css"/>
+
+  <script src="scripts/lectures-scripts.js"></script>
+  <script src="scripts/base-scripts.js"></script>
+
+  <script src="data/lectures.json"></script>
+</head>
+
+<body>
+  <div class="content-wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="mdl-layout__header mdl-layout__header--waterfall mdl-color--black mdl-color-text--white">
+      <div class="mdl-layout__header-row">
+
+        <div class="mdl-layout-spacer"></div>
+
+        <h4 class="header-title color-text--inherit typography--montserrat-black typography--no-decoration mdl-typography--text-center mdl-typography--text-uppercase">
+          Encontro do BCC
+        </h4>
+        
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#welcome">O Encontro</a>
+          <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#schedule">Programação</a>
+          <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#history">História</a>
+          <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#setting">Local</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mdl-color--black mdl-layout__drawer">
+      <span class="mdl-layout-title mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-center mdl-typography--text-uppercase">
+        Encontro do BCC
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#welcome">O Encontro</a>
+        <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#schedule">Programação</a>
+        <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#history">História</a>
+        <a class="mdl-navigation__link mdl-color-text--white typography--montserrat-black typography--no-decoration mdl-typography--text-uppercase" href="index.html#setting">Local</a>
+      </nav>
+    </div>
+
+    <section class="mdl-layout__content">
+
+      <article id="content" class="lecture-info mdl-color-text--white mdl-shadow--16dp">
+        <div class="lecture-info-theme">
+          <div id="lecture-image" class="lecture-info-theme-img mdl-color--light-blue-A700">
+          </div>
+          <div class="lecture-info-theme-title mdl-color--light-blue-A700 mdl-shadow--3dp">
+            <h1 id="lecture-title" class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Encontro do BCC</h1>            
+          </div>
+        </div>
+        <div id="lecture-info" class="lecture-info-text typography--montserrat">
+          <p>
+            O Encontro do BCC consiste numa semana de palestras que abordam temas variados sobre as diversas áreas da computação. Apesar
+            de ser voltado para o pessoal da graduação em ciência da computação, o evento é aberto e qualquer interessado
+            pode assistir as palestras.
+          </p>
+          <p>
+            Além de estarmos focados em trazer assuntos interessantes e inovadores, neste ano também contaremos com a presença das editoras
+            Aleph e Casa do Código com descontos especiais! E teremos sorteio de livros doados pelas editoras Blucher e Springer!
+          </p>
+          <p>
+            Sem falar nos maravilhosos coffee-breaks.
+          </p>
+        </div>
+        <div id="lecture-author" class="lecture-info-text lecture-info-author typography--montserrat mdl-grid">
+          <div id="lecture-author-image" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-color--black mdl-shadow--3dp">
+          </div>
+          <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet">
+            <h2 id="lecture-author-name" class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Autor</h2>
+            <div id="lecture-author-info">
+              Os ônibus circulares operados pela USP são linhas internas e gratuitas que complementam o transporte feito pelas linhas 8012
+              e 8022 (gratuito aos portadores do Bilhete USP), buscando oferecer, juntamente com o circular operado pela SPTrans,
+              um perfil adequado ao transporte. Horário de Funcionamento: de segunda a sexta-feira, das 6h às 22h.
+              Sistema de Transporte Especial voltado ao melhor conforto das pessoas com deficiência ou mobilidade reduzida. Informações:
+              USP LEGAL: 3091-2939 / Guarda Universitária (atendimento): 3091-4222
+            </div>
+          </div>
+        </div>
+        <div class="lecture-info-text lecture-info-select typography--montserrat mdl-grid">
+          <span class="mdl-cell mdl-cell--6-col mdl-typography--text-center">Selecione uma palestra: </span>
+          <select id="lecture-select" class="mdl-cell mdl-cell--6-col mdl-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" onchange="lectureSelected(event)" onfocus="this.selectedIndex = -1;">
+          </select>
+          <span class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+            Ou 
+            <a class="mdl-color-text--white" href="lectures-static.html">
+              veja todas as palestras aqui.
+            </a>
+          </span>
+        </div>
+      </article>
+
+      <footer class="typography--montserrat color--black-75 mdl-mega-footer mdl-color-text--white">
+        <div class="mdl-mega-footer--top-section">
+          <div class="mdl-mega-footer--left-section">
+            <a class="color-text--inherit typography--no-decoration" href="https://www.facebook.com/events/475208536148099" target="_blank">
+              Mais informações
+              <img class="footer-icon" src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_white_48dp.png" />
+            </a>
+          </div>
+          <div class="mdl-mega-footer--right-section">
+            <a class="color-text--inherit typography--no-decoration" href="#content">
+              Voltar ao topo
+              <i class="typography--vertical-align-middle material-icons">expand_less</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-mega-footer--middle-section mdl-typography--text-center">
+          <p class="typography--montserrat-black mdl-typography--text-uppercase mdl-typography--title">Apoio:</p>
+            <a class="color-text--inherit typography--no-decoration" href="http://bcc.ime.usp.br/principal/" target="_blank">
+              <img class="footer-icon-big" src="images/icon-bcc-logo.png" />
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="color-text--inherit typography--no-decoration" href="https://www.ime.usp.br/" target="_blank">
+              <img class="footer-icon-big" src="images/icon-ime-logo.png" />
+            </a>
+        </div>
+
+        <div class="mdl-mega-footer--bottom-section">
+          <p class="mdl-typography--caption">Web designer 
+            <a class="color-text--inherit" href="https://linux.ime.usp.br/~vitorsrg/" target="_blank">
+              Vitor SRG
+            </a>
+          </p>
+          <p class="mdl-typography--caption">
+            Powered by 
+            <a class="color-text--inherit" href="https://getmdl.io/" target="_blank">
+              MDL
+            </a>
+          </p>
+        </div>
+
+      </footer>
+
+    </section>
+
+    <canvas id="back-canvas"><canvas>
+
+  </div>
+</body>
+
+</html>

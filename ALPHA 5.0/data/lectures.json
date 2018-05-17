@@ -1,0 +1,20 @@
+var lectures = {
+  "Marco Civil": {
+    "author": {
+      "name": "Demi Getschko",
+      "info": "<p>Engenheiro eletricista formado pela POLI/USP, com mestrado e doutorado em Engenharia, é Conselheiro do CGI.br (Comitê Gestor da Internet no Brasil), Diretor-Presidente do NIC.br (Núcleo de Informação e Coordenação do Ponto br) e Professor Associado da PUC (Pontifícia Universidade Católica de São Paulo). Foi membro da diretoria da ICANN (Internet Corporation for Assigned Names and Numbers) pela ccNSO (Country Code Names Support Organization). Em abril de 2014 foi eleito para o Hall da Fama da Internet para a categoria “Conectores Globais”, com cerimônia realizada em Hong Kong. Em julho do mesmo ano foi agraciado com o prêmio “Cristina Tavares”, da Sociedade Brasileira de Computação. Em dezembro, no dia do Engenheiro, recebeu do Sindicato dos Engenheiros no Estado de São Paulo o prêmio “Personalidade da Tecnologia 2014”, na categoria “Internet”.</p>",
+      "image": "http://bcc.ime.usp.br/encontro/images/14.409b6eff.jpg"
+    },
+    "info": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",    
+    "image": "http://www.brasilamarelas.net/image/data/marcointernet-brasilamarelas.png"
+  },
+  "Contornando a criptografia": {
+    "author": {
+      "name": "Diego Aranha",
+      "info": "<p>É Professor Doutor na Universidade Estadual de Campinas (Unicamp) desde 2014. Tem experiência na área de Criptografia e Segurança Computacional, com ênfase em implementação eficiente de algoritmos criptográficos e análise de segurança de sistemas reais. Coordenou a primeira equipe de investigadores independentes capaz de detectar e explorar vulnerabilidades no software da urna eletrônica em testes controlados organizados pelo Tribunal Superior Eleitoral. É Bacharel em Ciência da Computação pela Universidade de Brasília (2005), Mestre (2007) e Doutor (2011) em Ciência da Computação pela Universidade Estadual de Campinas. Foi doutorando visitante por 1 ano na Universidade de Waterloo, Canadá, e Professor Adjunto por pouco mais de 2 anos no Departamento de Ciência da Computação da Universidade de Brasília. É membro do Comitê Consultivo da Conferência Internacional em Criptografia e Segurança da Informação na América Latina (LATINCRYPT) e da Comissão Especial de Segurança da Sociedade Brasileira de Computação (CESEG), responsável pelo Simpósio Brasileiro de Segurança da Informação e Sistemas Computacionais (SBSEG), tendo coordenado o Comitê de Programa na edição 2014 de ambos os eventos. Recebeu em 2016 os prêmios Google Latin America Research Award para pesquisa em privacidade e Inovadores com Menos de 35 Anos Brasil da MIT Technology Review por seu trabalho com o voto eletrônico.</p>",
+      "image": "http://bcc.ime.usp.br/encontro/images/2.14c59fd9.jpg"
+    },
+    "info": "<p>Atacantes racionais não atacam criptografia diretamente, buscando sempre contorná-la. Há inúmeros pontos em que técnicas criptográficas falham na prática, desde geração/distribuição insegura de chaves criptográficas e escolha inadequada de algoritmos/parâmetros, até o vazamento de informação crítica por canais laterais. Nessa palestra, serão discutidas formas de se explorar algumas dessas vulnerabilidades, ilustradas com casos reais do Brasil e do mundo.</p>",
+    "image": "http://images.iop.org/objects/phw/news/18/11/11/PW-2014-11-13-Cartlidge-qkd.jpg"    
+  }
+}

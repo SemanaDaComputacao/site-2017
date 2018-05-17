@@ -1,0 +1,446 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Material Design Lite</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/material-blog-android-desktop.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="images/material-blog-ios-desktop.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/material-blog-touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="images/material-blog-favicon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+  <link rel="stylesheet" href="styles/material-site-styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,900">
+
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+  <link rel="stylesheet" href="styles/index-styles.css"/>
+  <link rel="stylesheet" href="styles/base-styles.css"/>
+
+  <script src="scripts/base-scripts.js"></script>
+</head>
+
+<body>
+  <div class="content-wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall mdl-color--black mdl-color-text--white">
+      <div class="mdl-layout__header-row">
+        <span class="android-title mdl-layout-title">
+          <img class="android-logo-image" src="images/material-site-android-logo.png">
+        </span>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="android-header-spacer mdl-layout-spacer"></div>
+        <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="android-navigation-container">
+          <nav class="android-navigation mdl-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Play</a>
+          </nav>
+        </div>
+        <span class="android-mobile-title mdl-layout-title">
+          <img class="android-logo-image" src="images/material-site-android-logo.png">
+        </span>
+        <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item">5.0 Lollipop</li>
+          <li class="mdl-menu__item">4.4 KitKat</li>
+          <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
+          <li class="mdl-menu__item">Android History</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="android-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="android-logo-image" src="images/material-site-android-logo-white.png">
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Phones</a>
+        <a class="mdl-navigation__link" href="">Tablets</a>
+        <a class="mdl-navigation__link" href="">Wear</a>
+        <a class="mdl-navigation__link" href="">TV</a>
+        <a class="mdl-navigation__link" href="">Auto</a>
+        <a class="mdl-navigation__link" href="">One</a>
+        <a class="mdl-navigation__link" href="">Play</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Versions</span>
+        <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
+        <a class="mdl-navigation__link" href="">KitKat 4.4</a>
+        <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
+        <a class="mdl-navigation__link" href="">Android history</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Resources</span>
+        <a class="mdl-navigation__link" href="">Official blog</a>
+        <a class="mdl-navigation__link" href="">Android on Google+</a>
+        <a class="mdl-navigation__link" href="">Android on Twitter</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">For developers</span>
+        <a class="mdl-navigation__link" href="">App developer resources</a>
+        <a class="mdl-navigation__link" href="">Android Open Source Project</a>
+        <a class="mdl-navigation__link" href="">Android SDK</a>
+      </nav>
+    </div>
+
+    <section class="mdl-layout__content">
+
+      <a name="top"></a>
+
+      <article class="article-welcome color--black-75 mdl-color-text--white">
+        <div class="article-welcome-logo mdl-color--light-blue-A700">
+          <h1 class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Encontro do BCC</h1>
+        </div>
+        <div class="article-welcome-info typography--montserrat">
+          <p>
+            O Encontro do BCC consiste numa semana de palestras que abordam temas variados sobre as diversas áreas da computação. Apesar
+            de ser voltado para o pessoal da graduação em ciência da computação, o evento é aberto e qualquer interessado
+            pode assistir as palestras.
+          </p>
+          <p>
+            Além de estarmos focados em trazer assuntos interessantes e inovadores, neste ano também contaremos com a presença das editoras
+            Aleph e Casa do Código com descontos especiais! E teremos sorteio de livros doados pelas editoras Blucher e Springer!
+          </p>
+          <p>
+            Sem falar nos maravilhosos coffee-breaks.
+          </p>
+        </div>
+      </article>
+
+      <article class="article-schedule color--light-blue-A700-75 mdl-color-text--white">
+        <h2 class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Programação</h2>
+        <div class="typography--montserrat mdl-grid">
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+            <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+              <thead>
+                <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+                  <td colspan="2">Segunda-feira</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    <a href="lectures.html#Palestra_1">
+                      <span class="mdl-color-text--light-blue-A700">Processamento de Linguagem Natural</span>
+                      <br>
+                      <span class="mdl-color-text--light-blue-A400">Marcelo Finger</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    Palestra <br> Pessoa
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+            <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+              <thead>
+                <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+                  <td colspan="2">Segunda-feira</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    <a href="lectures.html#Palestra_1">
+                      <span class="mdl-color-text--light-blue-A700">Processamento de Linguagem Natural</span>
+                      <br>
+                      <span class="mdl-color-text--light-blue-A400">Marcelo Finger</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    Palestra <br> Pessoa
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+            <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+              <thead>
+                <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+                  <td colspan="2">Segunda-feira</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    <a href="lectures.html#Palestra_1">
+                      <span class="mdl-color-text--light-blue-A700">Processamento de Linguagem Natural</span>
+                      <br>
+                      <span class="mdl-color-text--light-blue-A400">Marcelo Finger</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    Palestra <br> Pessoa
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+            <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+              <thead>
+                <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+                  <td colspan="2">Segunda-feira</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    <a href="lectures.html#Palestra_1">
+                      <span class="mdl-color-text--light-blue-A700">Processamento de Linguagem Natural</span>
+                      <br>
+                      <span class="mdl-color-text--light-blue-A400">Marcelo Finger</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    Palestra <br> Pessoa
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-color--black mdl-shadow--3dp">
+            <table class="mdl-card-text-table mdl-color--black mdl-typography--text-center">
+              <thead>
+                <tr class="mdl-color--grey-900 mdl-typography--text-uppercase mdl-typography--title">
+                  <td colspan="2">Segunda-feira</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    <a href="lectures.html#Palestra_1">
+                      <span class="mdl-color-text--light-blue-A700">Processamento de Linguagem Natural</span>
+                      <br>
+                      <span class="mdl-color-text--light-blue-A400">Marcelo Finger</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+                <tr>
+                  <td>14:30</td>
+                  <td rowspan="2">
+                    Palestra <br> Pessoa
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-history color--black-75 mdl-color-text--white">
+        <h2 class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">História</h2>
+        <div>
+          <p>
+            O BCC (Bacharelado em Ciência da Computação) no IME/USP teve sua primeira turma formada em 1974 e sua forma de ingresso era
+            como opção para os que quisessem cursar Matemática até 1983. Em 1984, virou opção da Fuvest na área de Ciências
+            Exatas, prova vestibular para ingresso à USP. O curso, ao contrário do que muitos pensam, não se resume exatamente
+            à programação e mesmo quando se trata disso, há várias áreas nas quais podemos usar tal ferramenta. Nesse contexto,
+            nós, alunos do BCC, criamos o Encontro como uma forma de guiar quem está no curso e mostrar do que ele realmente
+            se trata para quem não está.
+          </p>
+          <p>
+            O Encontro BCC é um evento anual onde promovemos palestras, workshops e outras atividades para mostrar parte das experiências
+            que o curso de Ciência da Computação no IME/USP pode oferecer. O encontro é realizado desde 2009 e é totalmente
+            organizado por alunos do BCC. Em 2014, excepcionalmente, nosso curso completará 40 anos desde sua primeira turma
+            formada. Para expressarmos nossa gratidão e desejo por mais 40 anos na formação de cérebros da Computação, faremos
+            uma edição especial do Encontro, com direito a eventos culturais, gastronômicos e claro, mais computação!
+          </p>
+        </div>
+      </article>
+
+      <article class="article-place mdl-color-text--white">
+        <div class="color--light-blue-A700-75">
+          <h2 class="typography--montserrat-black mdl-typography--text-center mdl-typography--text-uppercase">Como chegar</h2>
+          <p class="typography--montserrat">
+            O evento ocorrerá no auditório Auditório Jacy Monteiro do Bloco B do IME-USP, localizado na rua do Matão, 1010 - Butantã,
+            São Paulo - CEP 05508-090 - Brasil.
+          </p>
+          <div class="typography--montserrat mdl-grid">
+            <iframe class="article-place-maps mdl-card mdl-cell mdl-cell--6-col mdl-color--black mdl-shadow--3dp" frameborder="0" 
+            src="https://www.google.com/maps/embed/v1/view?zoom=17&center=-23.5595,-46.7313&key=AIzaSyDD00St30hKE871UdplT4ZRvQNFoG6TvYo" allowfullscreen></iframe>
+            <div class="mdl-cell mdl-cell--6-col">
+              <p>
+                CIRCULAR – USP
+              </p>
+              <p>
+                Os ônibus circulares operados pela USP são linhas internas e gratuitas que complementam o transporte feito pelas linhas 8012
+                e 8022 (gratuito aos portadores do Bilhete USP), buscando oferecer, juntamente com o circular operado pela SPTrans,
+                um perfil adequado ao transporte. Horário de Funcionamento: de segunda a sexta-feira, das 6h às 22h.
+              </p>
+              <p>
+                Trajeto Ônibus Circular
+              </p>
+              <p>
+                Trajeto Linhas 8012 e 8022
+              </p>
+              <p>
+                Mapa do Campus
+              </p>
+              <p>
+                TRANSPORTE ESPECIAL
+              </p>
+              <p>
+                Sistema de Transporte Especial voltado ao melhor conforto das pessoas com deficiência ou mobilidade reduzida. Informações:
+                USP LEGAL: 3091-2939 / Guarda Universitária (atendimento): 3091-4222
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <footer class="typography--montserrat color--black-75 mdl-mega-footer mdl-color-text--white">
+        <div class="mdl-mega-footer--top-section">
+          <div class="mdl-mega-footer--left-section">
+            <a class="color-text--inherit typography--no-decoration" href="https://www.facebook.com/events/475208536148099" target="_blank">
+              Mais informações
+              <img class="footer-icon" src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_white_48dp.png" />
+            </a>
+          </div>
+          <div class="mdl-mega-footer--right-section">
+            <a class="color-text--inherit typography--no-decoration" href="#top">
+              Voltar ao topo
+              <i class="material-icons">expand_less</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-mega-footer--middle-section mdl-typography--text-center">
+          <p class="typography--montserrat-black mdl-typography--text-uppercase mdl-typography--title">Apoio:</p>
+            <a class="color-text--inherit typography--no-decoration" href="http://bcc.ime.usp.br/principal/" target="_blank">
+              <img class="footer-icon-big" src="images/icon-bcc-logo.png" />
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="color-text--inherit typography--no-decoration" href="https://www.ime.usp.br/" target="_blank">
+              <img class="footer-icon-big" src="images/icon-ime-logo.png" />
+            </a>
+        </div>
+
+        <div class="mdl-mega-footer--bottom-section">
+          <p class="mdl-typography--caption">Web designer 
+            <a class="color-text--inherit" href="https://linux.ime.usp.br/~vitorsrg/" target="_blank">
+              Vitor SRG
+            </a>
+          </p>
+          <p class="mdl-typography--caption">
+            Powered by 
+            <a class="color-text--inherit" href="https://getmdl.io/" target="_blank">
+              MDL
+            </a>
+          </p>
+        </div>
+
+      </footer>
+
+    </section>
+
+    <canvas id="back-canvas"><canvas>
+  </div>
+</body>
+
+</html>

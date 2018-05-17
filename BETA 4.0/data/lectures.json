@@ -1,0 +1,108 @@
+var lectures = {
+  "Computação Musical e Sonologia": {
+    "author": {
+      "name": "Marcelo Queiroz",
+      "info": "<p>Marcelo Queiroz é Professor Associado do Departamento de Ciência da Computação e vice-coordenador do NuSom - Núcleo de Pesquisas em Sonologia da Universidade de São Paulo. Sua formação inclui bacharelados em Ciência da Computação e em Música (Composição), mestrado em Matemática Aplicada e doutorado e livre-docência em Ciência da Computação. Seus interesses de pesquisa incluem processamento sonoro/musical/de voz, acústica computacional, música móvel e em rede, e análise/composição/performance/improvisação musicais mediadas por tecnologia.</p>",
+      "image": "url(\"images/speakers/marcelo_queiroz.jpg\") center center / cover"
+    },
+    "info": "<p>Nesta palestra vamos apresentar conceitos fundamentais associados à representação e ao processamento de áudio e música no computador. Falaremos da representação digital de sinais de áudio e da transformada de Fourier, de representações simbólicas (como MIDI) e técnicas de síntese, da extração de parâmetros acústicos e informações musicais a partir de sinais, e da simulação de ambientes acústicos e instrumentos musicais usando técnicas computacionais. Finalmente, ilustraremos os conceitos com resultados de projetos de pesquisa desenvolvidos em colaboração entre os grupos de pesquisa em Computação Musical do IME/USP e Sonologia da ECA/USP.</p>",    
+  },
+  "A Teoria IMEana aplicada no desenvolvimento de jogos": {
+    "author": {
+      "name": "Vinicius Vecchi",
+      "info": "<p>Formado em Matemática Aplicada e Computacional pelo IME-USP, desenvolvedor de jogos desde 2008. Um dos sócios fundadores da VRMonkey, empresa que produziu o Dinos do Brasil para o museu Catavento Cultural, jogos para GearVR, Oculus Rift e HTC Vive, além de experiências VR e Vídeos 360 sob contratos de terceiros.</p>",
+      "image": "url(\"images/speakers/vinicius_vecchi.png\") center center / cover"
+    },
+    "info": "<p>Nessa palestra vou contar um pouco de como usei conhecimentos teóricos do IME na prática de produção de jogos, incluindo Algoritmos, Álgebra Linear e Análise Numérica.</p>",
+  },
+  "Smart Cities": {
+    "author": {
+      "name": "Kiev Gama",
+      "info": "<p>Professor Adjunto do Centro de Informática (CIn) da Universidade Federal de Pernambuco (UFPE). Obteve o doutorado em Ciência da Computação pela Université de Grenoble (2011), com tese focada em dependabilidade em plataformas dinâmicas baseadas em componentes de software. Tem interesse em pesquisa aplicada preferencialmente no contexto de Internet das Coisas e Cidades Inteligentes, e que envolvam as seguintes áreas: Sistemas distribuídos, middleware e engenharia de software baseada em componentes (CBSE). Associado da Sociedade Brasileira de Computação (SBC).</p>",
+      "image": "url(\"images/speakers/kiev_gama.jpeg\") center center / cover"
+    },
+    "info": "<p class=\"typography--italic typography--urderline\">Top-down ou bottom-up? O papel da computação em diferentes abordagens para cidades inteligentes</p><p>O crescente aumento populacional urbano tem trazido grandes desafios para os gestores de cidades. Problemas relacionados ao tráfego, segurança, educação, saúde, consumo de água e energia, conservação de vias e espaços públicos, dentre outras questões urbanas, tem sido cada vez mais difíceis de serem administrados. As tecnologias de informação e comunicação (TICs) podem ter papel importante, auxiliando no monitoramento, controle e tomada de decisões diante de tais problemas. O conceito que vem sendo chamado de Cidades Inteligentes (Smart Cities) é uma tendência mundial relativa ao emprego de práticas de sustentabilidade e ao uso de soluções intensivas de TICs como instrumentos para tornar cidades mais inteligentes, otimizando certos aspectos da vida urbana.</p><p>Enquanto governos começaram a trazer este novo conceito por meio de estratégias top-down, focando em soluções de monitoramento e controle na tentativa de reduzir o caos nas cidades, também tomaram corpo diversas iniciativas espalhadas pelo mundo que trazem uma abordagem bottom-up. Neste caso, os próprios cidadãos podem tornar-se atores fundamentais no ecossistema de inovação em cidades inteligentes. Esta palestra traz uma discussão acerca do papel da computação em ambas abordagens e de desafios tecnológicos existentes nestes cenários.</p>",
+  },
+  "Geometria Computacional e Aplicações": {
+    "author": {
+      "name": "Jorge Stolfi",
+      "info": "<p>Jorge Stolfi (São Paulo, 1950) é um professor de ciências da computação da Universidade Estadual de Campinas, realizando pesquisas de várias áreas da computação e matemática aplicada, especialmente processamento de imagens, visão computacional, aproximação de funções, computação auto-validada, Geometria computacional, otimização e reconhecimento de padrões. Também atua nas áreas de teoria da computação, estrutura de dados, análise de algoritmos, teoria dos grafos, e processamento de linguagens naturais.</p>",
+      "image": "url(\"images/speakers/jorge_stolfi.jpg\") center center / cover"
+    },
+    "info": "<p>Os primeiros algoritmos para resolver problemas geométricos de que se tem notícia foram descobertos há uns dois ou três milênios. Na verdade, para os gregos da Antiguidade, geometria e computação eram praticamente sinônimos. (O algoritmo de Euclides para o MDC, por exemplo, era formulado como um problema de geometria).</p><p>Computadores têm sido usados para cálculos geométricos, por exemplo em engenharia civil, desde sua invenção. Entretanto, a geometria computacional nasceu como um ramo da teoria da computação em 1978, com a tese de M. I. Shamos \"Computational Geometry\", publicada como livro em 1985.</p><p>O objetivo principal da disciplina é desenvolver e analisar algoritmos eficientes para todo tipo de problemas geométricos. A eficiência é geralmente expressa em termos de classe assintótica, como O(n log n) ou O(n^2), para o pior caso ou caso médio. Também interessa a complexidade de problemas, isto é, cotas inferiores para o custo de qualquer algoritmo que os resolva.</p><p>Geometria computacional tem aplicações em praticamente todas as áreas da ciência e tecnologia, de agronomia a zoologia. Dentre as aplicações mais avançadas e massivas estão computação gráfica, modelagem geométrica, cartografia, usinagem e prototipagem, e análise estrutural.</p><p>Nesta palestra pretendo dar uma noção do espírito da geometria computacional descrevendo alguns algoritmos clássicos (e úteis), e alguns problemas práticos que recaem em problemas não triviais da área.</p><p>Créditos da foto: Por <a href=\"//commons.wikimedia.org/wiki/User:Horadrim\" title=\"User:Horadrim\">Horadrim</a> - <span class=\"int-own-work\" lang=\"pt\">Obra do próprio</span>, <a href=\"http://creativecommons.org/licenses/by-sa/4.0\" title=\"Creative Commons Attribution-Share Alike 4.0\">CC BY-SA 4.0</a>, <a href=\"https://commons.wikimedia.org/w/index.php?curid=50981425\">Ligação</a></p>",
+  },
+  "Inferência em Linguagem Natural": {
+    "author": {
+      "name": "Marcos Lopes",
+      "info": "<p>Marcos Lopes, professor no Departamento de Linguística da USP, é doutor em Linguística pela Universidade de Paris, com pós-doutorados em Linguística Computacional (USP) e ciência cognitiva (UQAM, Montreal), sendo essas as áreas de interesse em suas pesquisas, que envolvem, ainda, a lógica e a filosofia da linguagem.</p>",
+      "image": "url(\"images/speakers/marcos_lopes.jpg\") center center / cover"
+    },
+    "info": "<p>A Inferência em Linguagem Natural, comumente abreviada por sua sigla em inglês, NLI, é uma das especialidades ligadas à Linguística Computacional e, mais globalmente, à Inteligência Artificial. Trata-se da tentativa de estabelecer modelos de análise que permitam a geração de hipóteses a partir de dados textuais específicos em língua natural. A forma típica do problema consiste na apresentação de um curto fragmento de texto (materialmente, de uma frase a um parágrafo), chamado de premissa ou texto, pareado a uma hipótese cujo valor de verdade (Verdadeiro ou Falso) é avaliado exclusivamente em função validade inferencial por relação à premissa. Eis um exemplo:</p><p><span class=\"mdl-typography--font-bold\">Premissa:</span> A temperatura no deserto do Saara é tal que pode-se fritar um ovo colocando-o numa frigideira com óleo sob o sol.</p><p><span class=\"mdl-typography--font-bold\">Hipótese:</span> Faz muito calor no deserto do Saara.</p><p><span class=\"mdl-typography--font-bold\">Avaliação:</span> Verdadeira.</p><p>Embora um agente humano realmente não hesite em avaliar (quase sempre corretamente) o valor de verdade de pares de expressões assim, o desafio que a tarefa representa para sistemas computacionais é enorme. O interesse atual dos estudos de Inferência em Linguagem Natural (e deste projeto, portanto) decorre essencialmente da dificuldade em encontrar sequer uma pista do melhor caminho a trilhar: estratégias probabilísticas, aprendizado de máquina, análises linguísticas, lógicas ou, por fim, métodos híbridos integrando duas ou mais destas. Nesta apresentação, vamos discutir sucintamente esses diferentes métodos, buscando explicitar seus recursos e limitações próprios.</p>",
+    "image": ""    
+  },
+  "Algoritmos de Recomendação": {
+    "author": {
+      "name": "Matheus Cesário",
+      "info": "<p>Matheus Santos é formado Bacharel em Ciências da Computação pela UNESP e ingressou na Kekanto em 2015 como engenheiro de software. Na Kekanto trabalhou nos sistemas de busca e ajudou a criar o sistema de recomendações da plataforma. Hoje é engenheiro de software na Delivery Direto e entre suas paixões/responsabilidades estão data science, mineração de dados e gerenciamento do produto.</p>",
+      "image": "url(\"images/speakers/matheus_cesario.JPG\") center center / cover"
+    },
+    "info": "<p>Graças ao avanço da tecnologia temos acesso a uma fonte infinita de informações. Entretanto este aumento exponencial pode gerar uma verdadeira confusão para os usuários devido ao grande número de opções e material para consumir. É dentro deste contexto que assuntos como mineração de dados e aprendizado de máquina vêm ganhando cada vez mais notoriedade. Ao unir dados a técnicas refinadas de busca e classficação é possível criar mecanismos que servem de guia para o usuário, gerando conteúdo personalizado e o ajudando a encontrar informações de forma mais clara de acordo com seu interesse.</p><p>Netflix, Amazon, Facebook, Google, Quora... estes são alguns exemplos de empresas que exploram estes recursos e causam impacto em milhões de usuários todos os dias.Mecanismos que têm esta finalidade são chamados de sistemas de recomendação e nesta palestra iremos entender de modo geral como agregar valor a sua aplicação implementando estas ideias para gerar conteúdos exclusivos de acordo com o gosto dos usuários.</p>",
+  },
+  "Segurança Web": {
+    "author": {
+      "name": "Marcos Simplício Júnior",
+      "info": "<p>É professor associado (nível MS-5) junto ao departamento de Engenharia de Computação e Sistemas Digitais da Escola Politécnica, Universidade de São Paulo. Atua em projetos relacionados com cyber-segurança desde 2007, cobrindo aspectos de projeto e análise de primitivas de segurança, protocolos seguros e sistemas de segurança de uma forma geral.</p>",
+      "image": "transparent"
+    },
+    "info": "<p>A palestra traz uma visão geral do que é segurança na web e criptografia, envolve vários conceitos matemáticos aprendidos em cursos de matemática: construção e análise de algoritmos, além de explicar o funcionamento de modelos de segurança para computadores e redes, criptoanálise e mais.</p>",
+  },
+  "Gendered Innovations": {
+    "author": {
+      "name": "Claudia Melo",
+      "info": "<p>A Dra. Claudia Melo é Professora na Universidade de Brasília, Faculdade de Tecnologia, onde conduz pesquisa alinhada aos objetivos de sustentabilidade da ONU 2030, incluindo Liderança na era digital, Gendered innovations, Operations and analytics e End-user development. Ela também é Conselheira do Mulheres na Tecnologia.</p><p>Nos últimos 17 anos, Claudia uniu-se a diferentes empresas brasileiras e multinacionais com foco em desenvolvimento de software. Ela conduz um amplo trabalho em Métodos Ágeis e Inovação Digital envolvendo colaboração com lideranças brasileiras e internacionais, empresas, universidades, empreendedores e governo. Foi Diretora Global de Aprendizagem e Desenvolvimento, na ThoughtWorks, e, antes disso, CTO da ThoughtWorks para América Latina.</p><p>Na academia, sua pesquisa já envolveu times e organizações ágeis, produtividade, inovação e empreendedorismo em startups digitais. É participante ativa da comunidade ágil nacional e internacional, com diversas publicações e palestras no Brasil, Estados Unidos, Europa, Escandinávia e Oriente Médio. Em 2015, recebeu o Prêmio Tese Destaque da USP.</p>",
+      "image": "url(\"images/speakers/claudia_melo.jpg\") center center / cover"
+    },
+    "info": "<p></p>",
+    "image": ""    
+  },
+  "1971-2017: Como Você fazia seus EPs?": {
+    "author": {
+      "name": "Siang Wun Song e Edith Ranzini",
+      "info": "<h4>Siang Wun Song:</h4><p>Siang Wun Song é doutor em Ciência da Computação pela Carnegie Mellon University, mestre em Matemática Aplicada pelo IME-USP e Engenheiro Eletricista pela Escola Politécnica. Foi docente do IME-USP desde 1971, quando teve início o curso do BCC. Foi diretor do IME-USP de 1998-2002. Aposentado em 2006, mantém vínculo com o IME-USP como professor colaborador. Em 2007 foi admitido na Ordem Nacional do Mérito Científico, na classe de Comendador. Em 2011 recebeu o Prêmio Mérito Científico da SBC. É bolsista de produtividade em pesquisa do CNPq nível sênior. Sua área de interesse é o projeto de algoritmos paralelos.</p>",
+      "image": "url(\"images/speakers/siang_song.jpg\") center center / cover"
+    },
+    "info": "<p>Nesta palestra relembrarei sobre como foi o início do BCC,  sobre os alunos e o corpo docente. Comentarei sobre a infraestrutura de informática do curso do BCC, o que os alunos usavam em cada época, desde o tempo de cartão perfurado, computador de grande porte, terminais burros, primeiras redes de computadores no IME, rede local do IME, rede sem-fio, etc .Mostrarei alguns objetos (relíquias) usados naquele tempo (como régua de cálculo, folha de codificação, cartões perfurados, disquetes flexíveis, fitas magnéticas, etc.).</p><p>Participará também como palestrante a Professora Edith Ranzini da Escola Politécnica, que foi responsável em várias disciplinas do BCC, de cunho mais tecnológico. Ela mostrará diversas relíquias como memória de ferrite, etc.</p>",
+  },
+  "Possibilidades para empreender na USP": {
+    "author": {
+      "name": "Camila Yamashiro, Mauro Rebelo e Gabriel Sina",
+      "info": "<h4>Mauro Rebelo:</h4><p>Estudante de Engenharia Naval na Poli, onde ingressou em 2015. Membro do NEU há mais de 1 ano. Alguns projetos que liderou foram o HackathonUSP e-Governance de 2016 e o curso de capacitação de alunos para trabalharem em startups, “Treinamento de Novos Piratas”.</p><h4>Camila Yamashiro:</h4><p>Estudante do segundo ano de Administração na FEA, membro do NEU há quase um ano, liderou projetos como Bate-papo rede NEU e Startup Weekend SP Cidades Inteligentes. Recentemente, em Agosto, assumiu a presidência do Núcleo.</p>",
+      "image": "url(\"images/speakers/camila_mauro.png\") center center / contain no-repeat"
+    },
+    "info": "<p>O Núcleo de Empreendedorismo da USP - NEU,  é uma organização formada por alunos, apoiada por professores e pesquisadores da USP, focada no desenvolvimento da cultura de empreendedorismo, tecnologia e inovação na universidade. A palestra será focada nas iniciativas do NEU para suporte aos alunos da USP que desejam empreender ou adentrar no ambiente de startups. Também serão apresentados traços relevantes sobre o ecossistema empreendedor da USP e um guia de conteúdos para aqueles que querem tirar suas ideias do papel.</p><p>Teremos a presença do Gabriel Sina, programador e empreendedor, formado pela EACH e fundador da startup Area25, que apresentará os principais pontos da sua trajetória como empreendedor durante a graduação.</p>",
+  },
+  "Computação Holográfica": {
+    "author": {
+      "name": "Luciano Silva",
+      "info": "<p>Bacharel em Ciência da Computação pelo IME-USP (1996), Mestre em Matemática Aplicada pelo IME-USP (1998) e Doutor em Ciência da Computação pelo IME-USP (2004). Possui especialização em Data Science pela Universidade de Johns Hopkins (2015), Mineração de Dados pela Universidade de Illinois (2016) e em Data-driven Astronomy (2017). Professor e pesquisador do Laboratório de Computação Visual e do Centro de Radioastronomia e Astrofísica Mackenzie (CRAAM), ambos na Universidade Mackenzie. Coordenador do Bacharelado em Ciência da Computação do Mackenzie e Coordenador do Laboratório de Computação Visual.</p>",
+      "image": "url(\"images/speakers/luciano_silva.jpg\") center center / cover"
+    },
+    "info": "<p>Computação Holográfica corresponde ao uso de hologramas como elementos virtuais que podem ser incorporados a cenas reais, oferecendo novas oportunidades de pesquisa e desenvolvimento para Realidade Aumentada. O termo foi cunhado pela Microsoft com o advento do dispositivo Microsoft Hololens, que trabalha sob o suporte deste paradigma. Neste contexto, esta palestra apresenta as bases da Computação Holográfica, tanto do ponto de vista físico quanto computacional, e apresenta os princípios de desenvolvimento de aplicações para o Hololens, apresentando-o como uma alternativa viável para a produção de aplicações avançadas em Realidade Aumentada.</p>",
+  },
+  "Nossa experiência com desenvolvimento mobile usando a plataforma Xamarin": {
+    "author": {
+      "name": "Thiago Gomes Toledo",
+      "info": "<p>Bacharel em Ciência da Computação pelo IME-USP 2008-2013.  Trabalha com desenvolvimento de software a 8 anos, sendo 6 na Opus-Software, onde teve a oportunidade de passar por desenvolvimento Web usando JSF, AngularJS e React. Também trabalhou bastante na construção de Backends e APIs de serviços usando JAVA e C#  principalmente, mas onde mais atuou foi no terreno Mobile, onde passou por projetos Android e iOS nativos, Ionic e por fim Xamarin.</p>",
+      "image": "url(\"images/speakers/thiago_gomes_toledo.jpg\") center center / cover"
+    },
+    "info": "<p>A palestra cobrirá os seguintes tópicos:</p><ul><li>Aplicações mobile e o mundo hoje</li><li>Desenvolvimento mobile híbrido e nativo</li><li>O que é o framework Xamarin</li><li>Um pouco da história desse framework</li><li>Casos que tivemos com desenvolvimento mobile</li><li>Quais Vantagens e Desvantagens obtivemos usando esse framework.</li></ul>",
+  },
+  "O que é FPGA?": {
+    "author": {
+      "name": "Daniel Jorge Renjiffo",
+      "info": "<p>Estudante do Bacharelado em Ciência da Computação pelo IME-USP.</p>",
+      "image": "url(\"images/speakers/daniel_jorge.jpg\") center center / cover"
+    },
+    "info": "<p>FPGA (“field-programmable gate array”) é uma tecnologia que vem ganhando  destaque ultimamente em projeto que demandam alto desempenho como computação visual, criptografia, emulação de hardware, reconhecimento de fala e etc. Venha aprender sobre essa tecnologia com exemplos e demonstrações em FPGA 101.</p>",
+  }
+}

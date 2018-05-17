@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*ID's*/
+#back-canvas {
+  position: fixed; 
+  top: 0; 
+  height: 100%; 
+  width: 100%; 
+  background: url(styles/images/connections-white.png) repeat;
+}
+
+/*Classes*/
+.typography--montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.typography--montserrat-black {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+/*Elements*/
+
+/*Media*/
+
+/*Fonts*/

@@ -1,0 +1,59 @@
+
+@charset "UTF-8";
+
+/*ID's*/
+
+#main-head {
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#main-sect {
+    margin: 85px calc((100% - 1200px) / 2) 0 calc((100% - 1200px) / 2);
+    width: 1200px;
+}
+
+#main-foot {
+    background-color: black;
+    height: 100px;
+}
+
+#main-back {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/*Classes*/
+
+.main-sect-artc {
+    background-color: rgba(30, 30, 30, .75);
+    height: 600px;
+    margin-bottom: 50px;
+    width: 1200px;
+}
+
+/*Elements*/
+
+* {
+  border: 0;
+  font-family: Calibri, 'Calibri ttf', Arial;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(rgb(32, 66, 166), rgb(29, 18, 113));
+  background-color: #424242;
+  border: 0;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

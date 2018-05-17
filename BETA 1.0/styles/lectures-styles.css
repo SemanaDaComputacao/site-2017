@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/*ID's*/
+
+/*Classes*/
+.lecture-info {
+  background: rgba(0, 0, 0, .75);
+  border-radius: 2px;
+  margin: 30px calc((100% - 900px) / 2);
+  max-width: 900px;
+  width: 100%;
+}
+
+.lecture-info-theme-img  {
+  height: 280px;
+}
+
+.lecture-info-theme-title  {
+  display: table;
+  margin: 0 calc((100% - 600px - 2 * 6px) / 2);
+  margin-top: -140px;
+  max-width: 100%;
+  min-height: 150px;
+  padding: 6px;
+  width: calc(600px - 2 * 6px); 
+}
+
+.lecture-info-theme-title > h1 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+} 
+
+.lecture-info-text p {
+  margin: 0;
+  padding: 16px;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+.lecture-info-text ~ .lecture-info-text {
+  border-top: 1px solid #3b3b3b;
+}
+
+.lecture-info-author {
+  justify-content: center;
+}
+
+.lecture-info-author h2 {
+  margin: 0;
+}
+
+.lecture-info-select {
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+/*Elements*/
+
+/*Media*/
+@media (max-width: 900px) {
+  .lecture-info {
+    margin: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .lecture-info-theme-title {
+    margin: 0;
+    width: 100%;
+  } 
+
+  .mdl-cell--6-col-phone {
+    max-width: 350px;
+    width: calc(100% - 16px) !important;
+  }
+}
+
+/*Fonts*/

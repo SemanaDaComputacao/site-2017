@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Consecutivo: </title>
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+  <link href="styles/base-styles.css" rel="stylesheet" />
+  <link href="styles/lectures-styles.css" rel="stylesheet" />
+
+  <script src="scripts/base-scripts.js"></script>
+  <script src="scripts/lectures-scripts.js"></script>
+</head>
+
+<body>
+  <header id="main-head">
+  </header>
+  <section id="main-sect">
+    <article class="main-sect-artc">
+      Escolha uma palestra:
+      <select id="lect-slct" onchange="lectureSelected(event)">
+        <option value="Palestra_1"> Palestra 1, por Pessoa 1</option>
+        <option value="Palestra_2"> Palestra 2, por Pessoa 2</option>
+      </select>
+      <h1 id="lect-ttl"></h1>
+      <p id="lect-info">
+      </p>
+      <h2 id="lect-auth-nm"></h2>
+      <p id="lect-auth-info"></p>
+      <img id="lect-auth-img">
+    </article>
+  </section>
+  <footer id="main-foot">
+  </footer>
+</body>

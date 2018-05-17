@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/*ID's*/
+#main-content {
+    background: linear-gradient(/*#0D47A1, */#1A237E, #000);
+  padding-top: 30px;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+#main-section {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0;
+  width: 100%;
+}
+
+#main-back {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*Classes*/
+  /* Rules for sizing the icon. */
+  .material-icons.md-18 { font-size: 18px; }
+  .material-icons.md-24 { font-size: 24px; }
+  .material-icons.md-36 { font-size: 36px; }
+  .material-icons.md-48 { font-size: 48px; }
+
+  /* Rules for using icons as black on a light background. */
+  .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+    .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+  /* Rules for using icons as white on a dark background. */
+  .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+    .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.mdl-card-media-title {
+  background-size: cover;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mdl-card-title {
+}
+
+.mdl-card-text {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 64px;
+  padding: 16px;
+  width: calc(100% - 2 * 16px);
+}
+
+  .mdl-card-text ~ .mdl-card-text {
+    border-top: 2px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .mdl-card-text p {
+  text-align: justify;
+  text-indent: 50px;
+  text-justify: inter-word;
+}
+
+.mdl-card-text-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+  .mdl-card-text-table td {
+    border: 1px solid #3b3b3b;
+  }
+
+.mdl-cell--5-col {
+    width: calc((100% * 5 / 15) - 16px);
+}
+
+.mdl-cell--15-col {
+    width: calc((100% * 15 / 15) - 16px);
+}
+
+.mdl-grid {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.schedule-table {
+  font-size: 13px;
+  margin-top: 16px;
+  max-width: 250px;
+  position: relative;
+  table-layout: fixed;
+}
+
+  .schedule-table td {
+    box-sizing: border-box;
+    height: 48px;
+    padding: 12px 18px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+    .schedule-table thead td {
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .schedule-table tbody td {
+      height: 24px;
+      padding: 6px 9px;
+    }
+
+      .schedule-table tbody td[colspan="2"] {
+        height: 48px;
+        padding: 12px 18px;
+      }
+
+      .schedule-table tbody td > a {
+        color: white;
+        text-decoration: none;
+      }
+
+    .schedule-table tbody tr {
+      cursor: pointer;
+    }
+
+/*Elements*/
+
+/*Media*/
+
+/*Fonts*/
+
+
+
+
+
+
+
+
+/*ID's*/
+
+#main-head {
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#main-sect {
+    margin: 85px calc((100% - 1200px) / 2) 0 calc((100% - 1200px) / 2);
+    width: 1200px;
+}
+
+#main-foot {
+    background-color: black;
+    height: 100px;
+}
+
+
+
+/*Classes*/
+
+.main-sect-artc {
+    background-color: rgba(30, 30, 30, .75);
+    height: 600px;
+    margin-bottom: 50px;
+    width: 1200px;
+}
+
+/*Elements*/
+
+* {
+  border: 0;
+  /* font-family: Calibri, 'Calibri ttf', Arial; */
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(rgb(32, 66, 166), rgb(29, 18, 113));
+  background-color: #424242;
+  border: 0;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
